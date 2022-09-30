@@ -5,7 +5,7 @@ MODEL:
   ROI_BOX_HEAD:
     USE_ZEROSHOT_CLS: True
     IMAGE_LABEL_LOSS: 'max_size'
-    ZEROSHOT_WEIGHT_PATH: '/private/home/notmahi/code/Detic/datasets/metadata/lvis-21k_clip_a+cname.npy'
+    ZEROSHOT_WEIGHT_PATH: 'datasets/metadata/lvis-21k_clip_a+cname.npy'
     USE_FED_LOSS: False # Federated loss is enabled when DYNAMIC_CLASSIFIER is on
   ROI_HEADS:
     NUM_CLASSES: 22047
@@ -16,7 +16,7 @@ MODEL:
   FPN:
     IN_FEATURES: ["swin1", "swin2", "swin3"]
   RESET_CLS_TESTS: True
-  TEST_CLASSIFIERS: ("/private/home/notmahi/code/Detic/datasets/metadata/oid_clip_a+cname.npy","/private/home/notmahi/code/Detic/datasets/metadata/o365_clip_a+cnamefix.npy")
+  TEST_CLASSIFIERS: ("datasets/metadata/oid_clip_a+cname.npy","datasets/metadata/o365_clip_a+cnamefix.npy")
   TEST_NUM_CLASSES: [500, 365]
 SOLVER:
   MAX_ITER: 180000
